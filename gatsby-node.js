@@ -64,3 +64,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        components: path.resolve(__dirname, 'src/components/'),
+        utils: path.resolve(__dirname, 'src/utils/'),
+        static: path.resolve(__dirname, 'static/'),
+      }
+    }
+  })
+}
