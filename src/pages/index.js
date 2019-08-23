@@ -1,9 +1,8 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import PostSummary from "components/post-summary"
-import { rhythm } from "utils/typography"
 
 class BlogIndex extends React.Component {
   render() {
@@ -17,9 +16,9 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        {posts.map(({ node }) =>
+        {posts.map(({ node }) => (
           <PostSummary node={node} />
-        )}
+        ))}
       </Layout>
     )
   }
