@@ -1,8 +1,8 @@
-import React, { h1, h3 } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 const TitleElement = ({ root, children }) =>
-  root ? <h1>{children}</h1> : <h3>{children}</h3>
+  root ? <h1>{children}</h1> : <h2>{children}</h2>
 
 export const Header = ({ root = false, title }) => {
   return (
