@@ -8,6 +8,6 @@ description:
 
 Was a dope night.
 
-![](/images/2018-01-19-frequencies/1.jpg)
-![](/images/2018-01-19-frequencies/2.jpg)
-![](/images/2018-01-19-frequencies/3.jpg)
+![](./1.jpg)
+![](./2.jpg)
+![](./3.jpg)
