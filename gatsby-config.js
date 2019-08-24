@@ -12,6 +12,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Change plugin default options here, e.g.:
+        // ssr: false
+        // displayName: false,
+        // minify: false
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,

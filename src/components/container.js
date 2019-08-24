@@ -1,14 +1,7 @@
 import React from "react"
+import styled from "styled-components"
 
-export const Container = ({ children }) => {
-  return (
-    <section
-      style={{
-        maxWidth: "590px",
-        margin: "auto",
-      }}
-    >
-      {children}
-    </section>
-  )
-}
+export const Container = styled.section`
+  max-width: 590px;
+  margin: auto;
+`
