@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link } from "components/link"
 
 export const PostSummary = ({ node }) => {
   const title = node.frontmatter.title || node.fields.slug

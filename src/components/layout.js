@@ -1,13 +1,14 @@
 import React from "react"
 
 import { Header } from "./header"
+import { Link } from "./link"
 import { Container } from "./container"
 
 const Footer = () => (
   <footer>
     © {new Date().getFullYear()}, Built with
     {` `}
-    <a href="https://www.gatsbyjs.org">Gatsby</a>
+    <Link href="https://www.gatsbyjs.org">Gatsby</Link>
   </footer>
 )
 
