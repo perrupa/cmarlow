@@ -1,4 +1,6 @@
 import React from "react"
+import { GoogleFont } from "react-typography"
+import typography from "utils/typography"
 import { Link } from "gatsby"
 
 const TitleElement = ({ root, children }) =>
@@ -6,8 +8,11 @@ const TitleElement = ({ root, children }) =>
 
 export const Header = ({ root = false, title }) => {
   return (
-    <TitleElement root={root}>
-      <Link to={`/`}>{title}</Link>
-    </TitleElement>
+    <header>
+      <GoogleFont typography={typography} />
+      <TitleElement root={root}>
+        <Link to={`/`}>{title}</Link>
+      </TitleElement>
+    </header>
   )
 }
