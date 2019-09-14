@@ -1,10 +1,10 @@
 import React from "react"
 import { Link } from "components/link"
 
-export const PostSummary = ({ node }) => {
+export const PostSummary = ({ node, key }) => {
   const title = node.frontmatter.title || node.fields.slug
   return (
-    <div key={title}>
+    <div key={key}>
       <h3>
         <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
           {title}

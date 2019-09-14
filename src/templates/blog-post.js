@@ -12,6 +12,12 @@ const LinkContainer = styled.div`
   margin: 3em auto;
 `
 
+const BlogContainer = styled.article`
+  display: flexh
+  justify-content: space-between;
+  margin: 3em auto;
+`
+
 const Links = ({ next, previous }) => {
   return (
     <LinkContainer>
@@ -33,24 +39,23 @@ const Links = ({ next, previous }) => {
   )
 }
 
-const Post = ({ post }) => {
-  return (
-    <section>
-      <h1>{post.frontmatter.title}</h1>
-      <p
-        style={{
-          ...scale(-1 / 5),
-          display: `block`,
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
-        }}
-      >
-        {post.frontmatter.date}
-      </p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </section>
-  )
-}
+const Post = ({ post }) => (
+  <BlogContainer key={post.frontmatter.title}>
+    <h1>{post.frontmatter.title}</h1>
+    <p
+      style={{
+        ...scale(-1 / 5),
+        display: `block`,
+        marginBottom: rhythm(1),
+        marginTop: rhythm(-1),
+      }}
+    >
+      {post.frontmatter.date}
+    </p>
+    <div dangerouslySetInnerHTML={{ __html: post.html }} />
+  </BlogContainer>
+)
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -63,7 +68,9 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+
         <Post post={post} />
+
         <Links next={next} previous={previous} />
       </Layout>
     )

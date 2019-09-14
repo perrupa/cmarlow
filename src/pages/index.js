@@ -17,7 +17,7 @@ class BlogIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         {posts.map(({ node }) => (
-          <PostSummary node={node} />
+          <PostSummary key={node.fields.slug} node={node} />
         ))}
       </Layout>
     )
