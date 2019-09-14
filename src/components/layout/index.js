@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Header } from "./header"
-import { Link } from "./link"
+import { Link } from "../link"
 import { Container } from "./container"
 
 const Footer = () => (
@@ -12,7 +12,7 @@ const Footer = () => (
   </footer>
 )
 
-const Layout = ({ location, title, children }) => {
+export const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   return (
     <Container>

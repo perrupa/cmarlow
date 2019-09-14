@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 const containerWidth = "590px"
+
 export const Container = styled.section`
   max-width: ${containerWidth};
   margin: 2em auto;
