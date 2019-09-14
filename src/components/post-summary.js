@@ -4,7 +4,7 @@ import { Link } from "components/link"
 export const PostSummary = ({ node }) => {
   const title = node.frontmatter.title || node.fields.slug
   return (
-    <div key={node.fields.slug}>
+    <div key={title}>
       <h3>
         <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
           {title}
