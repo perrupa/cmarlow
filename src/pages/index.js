@@ -16,13 +16,19 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        {posts.map(({ node }) => (
-          <PostSummary key={node.fields.slug} node={node} />
-        ))}
+        <PostList posts={posts} />
       </Layout>
     )
   }
 }
+
+const PostList = ({ posts }) => (
+  <>
+    {posts.map(({ node }) => (
+      <PostSummary key={node.fields.slug} node={node} />
+    ))}
+  </>
+)
 
 export default BlogIndex
 
