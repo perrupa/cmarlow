@@ -4,7 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogPost = path.resolve(`./src/templates/blog-post/index.js`)
   return graphql(
     `
       {
@@ -69,10 +69,10 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        components: path.resolve(__dirname, 'src/components/'),
-        utils: path.resolve(__dirname, 'src/utils/'),
-        static: path.resolve(__dirname, 'static/'),
-      }
-    }
+        components: path.resolve(__dirname, "src/components/"),
+        utils: path.resolve(__dirname, "src/utils/"),
+        static: path.resolve(__dirname, "static/"),
+      },
+    },
   })
 }
