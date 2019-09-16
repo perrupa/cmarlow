@@ -2,6 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { PlainLink } from "components/link"
 
+const Wrapper = styled.article`
+  margin-bottom: 4em;
+`
+
 const PostTitle = styled.h3`
   font-size: 3em;
 `
@@ -30,7 +34,7 @@ export const PostSummary = ({ node }) => {
   }
 
   return (
-    <div>
+    <Wrapper>
       <PostTitle>
         <PlainLink to={post.url}>{post.title}</PlainLink>
       </PostTitle>
@@ -38,7 +42,7 @@ export const PostSummary = ({ node }) => {
       <PostDate>{post.date}</PostDate>
 
       <PostDescription content={post.description} />
-    </div>
+    </Wrapper>
   )
 }
 
