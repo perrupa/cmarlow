@@ -32,9 +32,7 @@ export const PostSummary = ({ node }) => {
   return (
     <div>
       <PostTitle>
-        <PlainLink style={{ boxShadow: `none` }} to={post.url}>
-          {post.title}
-        </PlainLink>
+        <PlainLink to={post.url}>{post.title}</PlainLink>
       </PostTitle>
 
       <PostDate>{post.date}</PostDate>

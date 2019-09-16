@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { darken } from "polished"
 import { Palette } from "utils/theme"
 import { Link as GatsbyLink } from "gatsby"
 
@@ -16,17 +17,24 @@ const applyLinkStyle = Component => styled(Component)`
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0em;
+    bottom: -0.2em;
     height: 3px;
-    background-color: ${Palette.brand};
     transition: 0.3s;
+    background-color: ${Palette.brand};
+  }
+
+  &:visited {
+    :before {
+      background-color: ${darken(0.2, Palette.brand)};
+    }
   }
 
   &:hover {
     :before {
       left: -2%;
       right: -2%;
-      bottom: 0.2em;
+      height: 5px;
+      bottom: -0.3em;
     }
   }
 `
