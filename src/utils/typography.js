@@ -1,13 +1,14 @@
 import Typography from "typography"
 
-const googleFonts = ["Work Sans", "Open Sans", "Roboto"]
+const googleFonts = ["Anonymous Pro", "Katibeh", "Corben", "Chonburi"]
 
 const typography = new Typography({
-  baseFontSize: "18px",
+  baseFontSize: "22px",
   baseLineHeight: 1.666,
+  scaleRatio: 5,
   googleFonts: googleFonts.map(name => ({ name, styles: ["400", "700"] })),
-  headerFontFamily: ["Work Sans"],
-  bodyFontFamily: ["Open Sans"],
+  headerFontFamily: ["Katibeh"],
+  bodyFontFamily: ["Anonymous Pro"],
 })
 
 // Hot reload typography in development.
