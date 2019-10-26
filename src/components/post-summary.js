@@ -11,8 +11,7 @@ const PostTitle = styled.h3`
 `
 
 const PostDate = styled.small`
-  margin-top: -3.5em;
-  margin-bottom: 1em;
+  margin-bottom: -0.5em;
   display: block;
   text-align: right;
 `
@@ -33,13 +32,14 @@ export const PostSummary = ({ node }) => {
     date: node.frontmatter.date,
   }
 
+  // debugger
   return (
     <Wrapper>
+      <PostDate>{post.date}</PostDate>
+
       <PostTitle>
         <PlainLink to={post.url}>{post.title}</PlainLink>
       </PostTitle>
-
-      <PostDate>{post.date}</PostDate>
 
       <PostDescription content={post.description} />
     </Wrapper>

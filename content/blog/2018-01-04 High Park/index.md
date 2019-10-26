@@ -3,7 +3,7 @@ id: posts/2018-01-04-High-Park
 path: /posts/2018-01-04 High Park
 date: 2018-01-04
 title: A walk in High Park
-description:
+description: Photos from a bike ride/walk with Lorien
 ---
 
 ![](./DSCF6519.jpg)
@@ -17,4 +17,4 @@ description:
 ![](./DSCF6598-2.jpg)
 ![](./DSCF6645-2.jpg)
 
-[Go back to the homepage](/)
+
