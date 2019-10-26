@@ -1,13 +1,19 @@
 import Typography from "typography"
 
-const googleFonts = ["Anonymous Pro", "Katibeh", "Corben", "Chonburi"]
+const googleFonts = [
+  "Anonymous Pro",
+  // "Katibeh",
+  // "Corben",
+  // "Chonburi",
+  "Staatliches",
+]
 
 const typography = new Typography({
-  baseFontSize: "22px",
-  baseLineHeight: 1.666,
-  scaleRatio: 5,
+  baseFontSize: "20px",
+  baseLineHeight: 1.5,
+  scaleRatio: 2,
   googleFonts: googleFonts.map(name => ({ name, styles: ["400", "700"] })),
-  headerFontFamily: ["Katibeh"],
+  headerFontFamily: ["Staatliches"],
   bodyFontFamily: ["Anonymous Pro"],
 })
 
