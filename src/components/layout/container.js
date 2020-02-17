@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import "../../style/style.scss"
 
-const containerWidth = "590px"
+const containerWidth = "790px"
 
 export const Container = styled.section`
   max-width: ${containerWidth};
