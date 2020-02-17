@@ -8,7 +8,7 @@ const googleFonts = [
   "Staatliches",
 ]
 
-const typography = new Typography({
+export const typography = new Typography({
   baseFontSize: "20px",
   baseLineHeight: 1.5,
   scaleRatio: 2,

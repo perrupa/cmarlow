@@ -6,8 +6,8 @@ const Wrapper = styled.article`
   margin-bottom: 4em;
 `
 
-const PostTitle = styled.h3`
-  font-size: 3em;
+const PostTitle = styled.h2`
+  font-size: 1.7em;
 `
 
 const PostDate = styled.small`
