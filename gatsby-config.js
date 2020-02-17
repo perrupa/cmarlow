@@ -11,6 +11,7 @@ module.exports = {
     },
   },
   plugins: [
+    "gatsby-plugin-sass",
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -78,7 +79,7 @@ module.exports = {
               // setting this to '{ sh: "bash" }' will let you use
               // the language "sh" which will highlight using the
               // bash highlighter.
-              aliases: {}
+              aliases: { sh: "bash" }
             }
           },
           `gatsby-remark-copy-linked-files`,

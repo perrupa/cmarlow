@@ -1,6 +1,5 @@
 // Syntax highlighting theme
-import "prismjs/themes/prism-twilight.css"
-// import "src/style/style.scss"
+// import "prismjs/themes/prism-twilight.css"
 
 // Fonts
 import "typeface-anonymous-pro"

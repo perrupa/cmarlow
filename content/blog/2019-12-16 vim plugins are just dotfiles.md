@@ -42,7 +42,7 @@ Now let's create a `markdown.vim` to add behaviour to files using the markdown f
 
 ```vim
 " ~/.config/nvim/ftplugin/markdown.vim
-" Up/Down to navigate between headings (by searching for lines starting w/ 1+ "#")
+" Up/Down to navigate between headings (by searching for lines starting w/ 1+ '#')
 nnoremap <Up> ?^#\+<cr>
 nnoremap <Down> /^#\+<cr>
 ```

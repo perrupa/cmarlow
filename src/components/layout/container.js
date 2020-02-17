@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import "../../style/style.scss"
 
 const containerWidth = "590px"
 
