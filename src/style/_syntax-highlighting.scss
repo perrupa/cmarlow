@@ -27,15 +27,16 @@ $code-color-selector:      $brand;
 
 $code-tab-size:            2;
 $code-font-size:           1em !default;
-$code-line-height:	     	 1.7;
+$code-line-height:	     	 1.4;
 
 // Dunno if I need this..?
 @import "prism";
 
 pre[class*="language-"] {
   position: relative;
-  padding: 1.5em 0;
+  padding: 1.5em 0.2em;
   margin: 3em 0;
+
   @media only screen and (max-width: 600px) {
     margin: 0 -10%;
     font-size: 80%;

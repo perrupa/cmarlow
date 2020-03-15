@@ -2,19 +2,21 @@ import Typography from "typography"
 
 const googleFonts = [
   "Anonymous Pro",
-  // "Katibeh",
+  "Montserrat",
   // "Corben",
-  // "Chonburi",
   "Staatliches",
 ]
 
 export const typography = new Typography({
   baseFontSize: "20px",
-  baseLineHeight: 1.5,
-  scaleRatio: 2,
+  baseLineHeight: 1.6,
+  scaleRatio: 3,
   googleFonts: googleFonts.map(name => ({ name, styles: ["400", "700"] })),
   headerFontFamily: ["Staatliches"],
-  bodyFontFamily: ["Anonymous Pro"],
+  bodyFontFamily: [
+    "Montserrat",
+    // "Corben",
+  ],
 })
 
 // Hot reload typography in development.
