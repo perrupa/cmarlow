@@ -1,6 +1,6 @@
 ---
-id: posts/2019-12-16 vim plugins are just dotfiles
-path: /posts/2019-12-16 vim plugins are just dotfiles
+id: posts/2019-12-16-vim-plugins-are-just-dotfiles
+path: /posts/2019-12-16-vim-plugins-are-just-dotfiles
 date: 2019-12-16
 title: Vim plugins are just dotfiles
 ---
