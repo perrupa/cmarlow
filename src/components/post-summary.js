@@ -3,17 +3,18 @@ import styled from "styled-components"
 import { PlainLink } from "components/link"
 
 const Wrapper = styled.article`
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 `
 
 const PostTitle = styled.h2`
   font-size: 1.7em;
+  margin-bottom: 0;
 `
 
 const PostDate = styled.small`
-  margin-bottom: -0.5em;
+  margin-left: 0.5em;
+  margin-bottom: 1em;
   display: block;
-  text-align: right;
 `
 
 const PostDescription = ({ content }) => (
@@ -35,11 +36,11 @@ export const PostSummary = ({ node }) => {
   // debugger
   return (
     <Wrapper>
-      <PostDate>{post.date}</PostDate>
-
       <PostTitle>
         <PlainLink to={post.url}>{post.title}</PlainLink>
       </PostTitle>
+
+      <PostDate>{post.date}</PostDate>
 
       <PostDescription content={post.description} />
     </Wrapper>
