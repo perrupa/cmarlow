@@ -61,10 +61,10 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "s": "yarn run develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "s": "gatsby develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
+    "format": "prettier --write src/**/*.{js,jsx}",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   }
 }
