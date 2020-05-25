@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { PlainLink } from "components/link"
+import { Link } from "components/link"
 
 const Wrapper = styled.article`
   margin-bottom: 3em;
@@ -37,7 +37,7 @@ export const PostSummary = ({ node }) => {
   return (
     <Wrapper>
       <PostTitle>
-        <PlainLink to={post.url}>{post.title}</PlainLink>
+        <Link to={post.url}>{post.title}</Link>
       </PostTitle>
 
       <PostDate>{post.date}</PostDate>

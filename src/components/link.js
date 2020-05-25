@@ -9,33 +9,35 @@ const applyLinkStyle = Component => styled(Component)`
   text-decoration: none;
   position: relative;
   z-index: 1;
+  transition: 0.15s;
 
   // pseudo-underline
   :before {
     z-index: -1;
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -0.2em;
-    height: 3px;
-    transition: 0.3s;
-    background-color: ${Palette.brand};
+    top: 90%;
+    left: -0%;
+    right: -0%;
+    bottom: 8%;
+    transition: 0.15s;
+    background-color: ${darken(0.2, Palette.brand)};
   }
 
   &:visited {
     :before {
-      background-color: ${darken(0.2, Palette.brand)};
+      // background-color: ${darken(0.2, Palette.brand)};
     }
   }
 
   &:hover {
     :before {
+      top: -2%;
+      bottom: -2%;
       left: -2%;
       right: -2%;
-      height: 5px;
-      bottom: -0.3em;
     }
+    color: #fff;
   }
 `
 
