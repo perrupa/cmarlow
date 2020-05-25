@@ -2,7 +2,7 @@ import Typography from "typography"
 
 const googleFonts = [
   "Anonymous Pro",
-  "Montserrat",
+  "DM Mono",
   // "Corben",
   "Staatliches",
 ]
@@ -14,7 +14,7 @@ export const typography = new Typography({
   googleFonts: googleFonts.map(name => ({ name, styles: ["400", "700"] })),
   headerFontFamily: ["Staatliches"],
   bodyFontFamily: [
-    "Montserrat",
+    "DM Mono",
     // "Corben",
   ],
 })

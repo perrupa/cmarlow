@@ -17,9 +17,9 @@ const applyLinkStyle = Component => styled(Component)`
     content: "";
     position: absolute;
     top: 90%;
+    bottom: 0%;
     left: -0%;
     right: -0%;
-    bottom: 8%;
     transition: 0.15s;
     background-color: ${darken(0.2, Palette.brand)};
   }

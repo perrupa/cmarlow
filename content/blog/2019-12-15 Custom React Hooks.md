@@ -127,7 +127,7 @@ function MyApp() {
 
 Now let's move over the bare minimum from our component into the hook. We should be extra careful to make sure that our tests still pass (you are testing your components, right?) and our component still works.
 
-> Since the `actions` block has no external referneces, we know that we can move these actions into our hook.
+> Since the `actions` block has no external references, we know that we can move these actions into our hook.
 
 ```js
 function useModal() {

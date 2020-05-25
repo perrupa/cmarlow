@@ -12,8 +12,7 @@ const PostTitle = styled.h2`
 `
 
 const PostDate = styled.small`
-  margin-left: 0.5em;
-  margin-bottom: 1em;
+  margin: 0.5em 0.5em 1em;
   display: block;
 `
 
