@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "components/layout"
 import SEO from "components/seo"
-import PostSummary from "components/post-summary"
+import { PostSummary } from "components/post-summary"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
