@@ -1,33 +1,33 @@
 $brand: rgb(221, 68, 36);
-$highlight: #4C9BEB;
+$highlight: #4c9beb;
 
 // Colors
 $code: #333;
 $operator: $brand;
 $subtle: #aaa;
-$subtler: rgba(0,0,0,0.1);
+$subtler: rgba(0, 0, 0, 0.1);
 $comment: $highlight;
 $value: $brand;
 
-$code-background:          transparent;
-$code-color:               $code;
-$code-color-fade:          $subtle;
-$code-text-shadow:         none;
-$code-box-shadow:          none;
-$code-border:              none;
+$code-background: transparent;
+$code-color: $code;
+$code-color-fade: $subtle;
+$code-text-shadow: none;
+$code-box-shadow: none;
+$code-border: none;
 
-$code-color-comment:       $comment;
-$code-color-keyword:       $operator;
-$code-color-value:         $value;
-$code-color-string:        $value;
-$code-color-name:          $code;
-$code-color-number:        $operator;
-$code-color-variable:      $value;
-$code-color-selector:      $brand;
+$code-color-comment: $comment;
+$code-color-keyword: $operator;
+$code-color-value: $value;
+$code-color-string: $value;
+$code-color-name: $code;
+$code-color-number: $operator;
+$code-color-variable: $value;
+$code-color-selector: $brand;
 
-$code-tab-size:            2;
-$code-font-size:           1em !default;
-$code-line-height:	     	 1.4;
+$code-tab-size: 2;
+$code-font-size: 1em !default;
+$code-line-height: 1.4;
 
 // Dunno if I need this..?
 @import "prism";
@@ -46,11 +46,11 @@ pre[class*="language-"] {
 pre[class*="language-"]::before {
   z-index: -1;
   position: absolute;
-  content: ' ';
+  content: " ";
   top: 0;
   bottom: 0;
-  left: -100%;
-  right: -100%;
+  left: -50vw;
+  right: -50vw;
   box-shadow: inset 0 0 5px 1px $subtler;
 
   background-color: #f7f7f7;
