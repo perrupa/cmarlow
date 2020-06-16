@@ -16,7 +16,7 @@ const StyledLink = styled(GatsbyLink)`
     z-index: -1;
     content: "";
     position: absolute;
-    top: 90%;
+    height: 4px;
     bottom: 0%;
     left: -0%;
     right: -0%;
@@ -32,7 +32,7 @@ const StyledLink = styled(GatsbyLink)`
     }
 
     :before {
-      top: -2%;
+      height: 110%;
       bottom: -2%;
       left: -2%;
       right: -2%;

@@ -7,9 +7,16 @@ const Wrapper = styled.article`
   margin-bottom: 3em;
 `
 
-const PostTitle = styled.h2`
+const PostTitle = styled.h3`
   font-size: 1.7em;
   margin-bottom: 0;
+`
+
+const ArticleLink = styled(Link)`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 `
 
 const PostDate = styled.small`
@@ -21,7 +28,7 @@ export const Subtext = styled.span`
   color: ${Palette.brand};
   font-size: 0.7em;
   position: relative;
-  bottom: -7px;
+  bottom: -2px;
 `
 
 const PublishedDate = ({ date }) => {
@@ -54,16 +61,13 @@ export const PostSummary = ({ node, index }) => {
     date: node.frontmatter.date,
   }
 
-  // debugger
-
-  console.log(node, index)
-
   return (
     <Wrapper>
       <PostTitle>
-        <Link to={post.url}>
-          <PublishedDate date={node.frontmatter.date} /> {post.title}
-        </Link>
+        <ArticleLink to={post.url}>
+          {post.title}
+          <PublishedDate date={node.frontmatter.date} />
+        </ArticleLink>
       </PostTitle>
 
       <PostDate>{post.date}</PostDate>
