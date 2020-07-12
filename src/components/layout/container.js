@@ -1,9 +1,16 @@
+import React from "react"
 import styled from "styled-components"
 import "../../style/style.scss"
 
 const containerWidth = "790px"
 
-export const Container = styled.section`
+export const PageLayout = styled.section`
+  max-width: 100vw;
+  overflow: hidden;
+  padding: 1em;
+`
+
+export const Content = styled.section`
   max-width: ${containerWidth};
   margin: 2em auto;
 
@@ -26,3 +33,9 @@ export const Container = styled.section`
     max-height: 90vh;
   }
 `
+
+export const Container = ({ children }) => (
+  <PageLayout>
+    <Content>{children}</Content>
+  </PageLayout>
+)

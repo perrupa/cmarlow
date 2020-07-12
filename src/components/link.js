@@ -32,8 +32,8 @@ const StyledLink = styled(GatsbyLink)`
     }
 
     :before {
-      height: 110%;
-      bottom: -2%;
+      height: 120%;
+      bottom: -10%;
       left: -2%;
       right: -2%;
     }
