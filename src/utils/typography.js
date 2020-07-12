@@ -1,22 +1,14 @@
 import Typography from "typography"
 
-const googleFonts = [
-  "Anonymous Pro",
-  "DM Mono",
-  // "Corben",
-  "Staatliches",
-]
+const googleFonts = ["DM Mono", "Karla"]
 
 export const typography = new Typography({
   baseFontSize: "20px",
   baseLineHeight: 1.6,
   scaleRatio: 3,
   googleFonts: googleFonts.map(name => ({ name, styles: ["400", "700"] })),
-  headerFontFamily: ["Staatliches"],
-  bodyFontFamily: [
-    "DM Mono",
-    // "Corben",
-  ],
+  headerFontFamily: ["Karla"],
+  bodyFontFamily: ["DM Mono"],
 })
 
 // Hot reload typography in development.

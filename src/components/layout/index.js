@@ -8,7 +8,7 @@ export const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   return (
     <Container>
-      <Header title={title} root={location.pathname === rootPath} />
+      {title && <Header title={title} root={location.pathname === rootPath} />}
 
       <main>{children}</main>
 

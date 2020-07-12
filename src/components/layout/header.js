@@ -11,6 +11,7 @@ export const Header = ({ root = false, title }) => {
   return (
     <header>
       <GoogleFont typography={typography} />
+
       <TitleElement root={root}>
         <PlainLink to={`/`}>{title}</PlainLink>
       </TitleElement>

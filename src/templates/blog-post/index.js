@@ -7,9 +7,8 @@ import { rhythm, scale } from "utils/typography"
 import { Links } from "./links"
 
 const BlogContainer = styled.article`
-  display: flexh
-  justify-content: space-between;
   margin: 3em auto;
+  padding: 1em;
 `
 
 const Post = ({ post }) => (

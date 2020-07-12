@@ -7,14 +7,9 @@ const containerWidth = "790px"
 export const PageLayout = styled.section`
   max-width: 100vw;
   overflow: hidden;
-  padding: 1em;
 `
 
 export const Content = styled.section`
-  max-width: ${containerWidth};
-  margin: 2em auto;
-
-  // is there a better place to put this?
   pre[class*="language-"] {
     font-size: 90%;
     border-radius: 0;
@@ -34,8 +29,8 @@ export const Content = styled.section`
   }
 `
 
-export const Container = ({ children }) => (
+export const Container = ({ children, fullWidth = false }) => (
   <PageLayout>
-    <Content>{children}</Content>
+    {fullWidth ? children : <Content>{children}</Content>}
   </PageLayout>
 )
