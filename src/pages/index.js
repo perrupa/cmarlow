@@ -15,7 +15,7 @@ const Section = styled.section`
 
 const MainHeader = styled.section`
   display: flex;
-  height: 70vh;
+  height: 40vh;
   justify-content: flex-end;
   align-items: flex-end;
   background-color: ${Palette.brand};

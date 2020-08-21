@@ -1,6 +1,8 @@
 import Typography from "typography"
 
-const googleFonts = ["DM Mono", "Karla"]
+const headerFontFamily = "Neuton"
+const bodyFontFamily = "Alegreya"
+const googleFonts = [bodyFontFamily, "Karla", "DM Mono"]
 
 export const typography = new Typography({
   baseFontSize: "20px",
@@ -8,7 +10,7 @@ export const typography = new Typography({
   scaleRatio: 3,
   googleFonts: googleFonts.map(name => ({ name, styles: ["400", "700"] })),
   headerFontFamily: ["Karla"],
-  bodyFontFamily: ["DM Mono"],
+  bodyFontFamily: [bodyFontFamily],
 })
 
 // Hot reload typography in development.

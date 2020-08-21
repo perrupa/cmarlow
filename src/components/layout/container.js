@@ -18,14 +18,10 @@ export const Content = styled.section`
 
   .gatsby-resp-image-link {
     @media only screen and (min-width: 600px) {
-      margin: 1em calc((100vw - ${containerWidth}) / 2 * -1) 1em;
+      // margin: 1em inherit 1em;
     }
 
     padding: 1em 0;
-  }
-
-  .gatsby-resp-image-wrapper {
-    max-height: 90vh;
   }
 `
 

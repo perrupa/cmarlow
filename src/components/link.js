@@ -24,7 +24,10 @@ const StyledLink = styled(GatsbyLink)`
     background-color: ${Palette.brand};
   }
 
+  &:target,
+  &:focus,
   &:hover {
+    outline: none;
     color: #fff;
 
     * {
