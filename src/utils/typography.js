@@ -1,15 +1,21 @@
 import Typography from "typography"
 
-const headerFontFamily = "Neuton"
-const bodyFontFamily = "Alegreya"
-const googleFonts = [bodyFontFamily, "Karla", "DM Mono"]
+const headerFontFamily = "Inter"
+const bodyFontFamily = "DM Mono"
+const googleFonts = [
+  bodyFontFamily,
+  headerFontFamily,
+  "Neuton",
+  "Karla",
+  "DM Mono",
+]
 
 export const typography = new Typography({
   baseFontSize: "20px",
   baseLineHeight: 1.6,
   scaleRatio: 3,
   googleFonts: googleFonts.map(name => ({ name, styles: ["400", "700"] })),
-  headerFontFamily: ["Karla"],
+  headerFontFamily: [headerFontFamily],
   bodyFontFamily: [bodyFontFamily],
 })
 

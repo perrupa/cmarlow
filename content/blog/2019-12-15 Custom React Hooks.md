@@ -37,7 +37,7 @@ function MyApp() {
 ## Step one: create an empty hook
 
 ```js
-/* use-modal-visibility.jsx */
+/* use-modal.jsx */
 function useModal() {
   return;
 };
