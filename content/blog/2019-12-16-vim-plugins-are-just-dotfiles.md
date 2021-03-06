@@ -7,20 +7,15 @@ title: Vim plugins are just dotfiles
 
 There sometimes seems to be a perception that Vim plugins are all heavy, or somehow having a .vimrc or init.vim free of plugins is somehow perferable. I'd like to clear some things up by demonstrating that Vim plugins are simply regular dotfiles, just in a different folder (or repo).
 
-
-## Well, what are dotfiles?
-
 > Dotfiles are plain text configuration files on Unix-y systems... They are called "dotfiles" as they typically are named with a leading `.`
 >
-> -- Chris and Gave @ Thoughbot
+> -- Chris and Gabe @ Thoughbot
 
-
-## Vim's configuration
+## Vim configuration
 
 In our context we're referring to our vim's dotfiles, which would be at `~/.config/vim/vimrc` (or `~/.config/nvim/init.vim` if you're using [Neovim](https://neovim.io/)). However there are more to vim's configuration than just the initial config entry file.
 
 Vim has more than just the `rc` or `init` entry point files though, there are a lot of other autoloaded folders and ways of loading configuration.
-
 
 ## Autoload folders
 
@@ -32,7 +27,6 @@ There are several folders that are automatically loaded by vim
 - `...` others....
 
 There sometimes seems to be a perception that Vim plugins are all heavy, or somehow having a `.vimrc` or `init.vim` free of plugins is somehow perferable. I'd like to clear some things up by demonstrating that Vim plugins are simply regular dotfiles, just in a different folder (or repo).
-
 
 ## Let's create a super-basic plugin!
 
@@ -46,7 +40,6 @@ Now let's create a `markdown.vim` to add behaviour to files using the markdown f
 nnoremap <Up> ?^#\+<cr>
 nnoremap <Down> /^#\+<cr>
 ```
-
 
 ## Close and reopen Vim to make sure it works 🤞
 
