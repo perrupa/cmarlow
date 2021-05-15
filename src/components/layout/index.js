@@ -4,11 +4,11 @@ import { Header } from "./header"
 import { Container } from "./container"
 import { Footer } from "./footer"
 
-export const Layout = ({ location, title, children }) => {
+export const Layout = ({ title, children, isHomepage = false }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   return (
     <Container>
-      {title && <Header title={title} root={location.pathname === rootPath} />}
+      {title && <Header title={title} h1={isHomepage} />}
 
       <main>{children}</main>
 

@@ -28,10 +28,10 @@ const StyledLink = styled(GatsbyLink)`
   &:focus,
   &:hover {
     outline: none;
-    color: #fff;
+    color: ${Palette.white};
 
     * {
-      color: #fff;
+      color: ${Palette.white};
     }
 
     :before {

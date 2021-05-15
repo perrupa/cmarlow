@@ -1,19 +1,24 @@
 import React from "react"
 import styled from "styled-components"
-import {graphql} from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "components/layout"
 import SEO from "components/seo"
-import {rhythm, scale} from "utils/typography"
-import {Links} from "./links"
+import { rhythm, scale } from "utils/typography"
+import { Links } from "./links"
+import { BoldTitle } from "../../components/bold-title"
+import { MainHeader } from "../../components/main-header"
 
 const BlogContainer = styled.article`
   margin: 3em auto;
   padding: 1em;
 `
 
-const Post = ({post}) => (
+const Post = ({ post }) => (
   <BlogContainer key={post.frontmatter.title}>
-    <h1>{post.frontmatter.title}</h1>
+    <MainHeader>
+      <BoldTitle>{post.frontmatter.title}</BoldTitle>
+    </MainHeader>
+
     <p
       style={{
         ...scale(-1 / 5),
@@ -24,17 +29,17 @@ const Post = ({post}) => (
     >
       {post.frontmatter.date}
     </p>
-    <div dangerouslySetInnerHTML={{__html: post.html}} />
+    <div dangerouslySetInnerHTML={{ __html: post.html }} />
   </BlogContainer>
 )
 
-function BlogPostTemplate() {
-  const post = this.props.data.markdownRemark
-  const siteTitle = this.props.data.site.siteMetadata.title
-  const {previous, next} = this.props.pageContext
+function BlogPostTemplate({ pageContext, data, props }) {
+  const post = data.markdownRemark
+  const siteTitle = data.site.siteMetadata.title
+  const { previous, next } = pageContext
 
   return (
-    <Layout location={this.props.location} title={siteTitle}>
+    <Layout fullWidth title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}

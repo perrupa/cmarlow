@@ -19,7 +19,7 @@ const ArticleLink = styled(Link)`
   align-items: flex-end;
 `
 
-const PostDate = styled.small`
+const PostDetails = styled.small`
   margin: 0.5em 0.5em 1em;
   display: block;
 `
@@ -46,7 +46,7 @@ const PublishedDate = ({ date }) => {
 }
 
 const PostDescription = ({ content }) => (
-  <p
+  <PostDetails
     dangerouslySetInnerHTML={{
       __html: content,
     }}
@@ -69,8 +69,6 @@ export const PostSummary = ({ node, index }) => {
           <PublishedDate date={node.frontmatter.date} />
         </ArticleLink>
       </PostTitle>
-
-      <PostDate>{post.date}</PostDate>
 
       <PostDescription content={post.description} />
     </Wrapper>

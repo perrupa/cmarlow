@@ -1,49 +1,25 @@
 import React from "react"
-import styled from "styled-components"
 import { graphql } from "gatsby"
 import { Link } from "components/link"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import { PostSummary } from "components/post-summary"
-import { Palette } from "utils/theme"
+import { BoldTitle } from "../components/bold-title"
+import { MainHeader } from "../components/main-header"
+import { Section, SectionTitle } from "../components/section"
 
-const Section = styled.section`
-  display: border-box;
-  margin: 5em auto 5em;
-  padding: 1em;
-`
-
-const MainHeader = styled.section`
-  display: flex;
-  height: 40vh;
-  justify-content: flex-end;
-  align-items: flex-end;
-  background-color: ${Palette.brand};
-`
-
-const SiteTitle = styled.h1`
-  font-family: "DM Mono";
-  font-size: 5em;
-  color: #fff;
-  margin: 0.2em;
-`
-
-const SectionTitle = styled.h2`
-  font-size: 2em;
-`
-
-const BlogIndex = ({ data, location }) => {
+export const Index = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} fullWidth>
+    <Layout isHomepage fullWidth>
       <SEO
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
 
       <MainHeader>
-        <SiteTitle>C:\Marlow</SiteTitle>
+        <BoldTitle>C:\Marlow</BoldTitle>
       </MainHeader>
 
       <Section>
@@ -58,6 +34,7 @@ const BlogIndex = ({ data, location }) => {
           You can see my side-projects on my{" "}
           <Link href="https://github.com/perrupa/">GitHub profile</Link>, and my
           photographs <Link href="https://instagram.com/perrupa">@perrupa</Link>
+          .
         </p>
       </Section>
 
@@ -71,7 +48,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default Index
 
 export const pageQuery = graphql`
   query {
