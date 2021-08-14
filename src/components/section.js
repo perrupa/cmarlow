@@ -21,8 +21,19 @@ export const SectionTitle = styled.h2`
   // }
 `
 
+export const SectionContainer = styled.main`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+`
+
 export const Section = styled.section`
-  display: border-box;
-  margin: 5em auto 5em;
+  flex: 1 1 500px;
+  margin: 1em auto 5em;
   padding: 1em;
+
+  @media only screen and (min-width: 1200px) {
+    flex: 1 1 40vw;
+    padding: 1em 5vw;
+  }
 `
