@@ -35,8 +35,7 @@ export const Index = ({ data }) => {
           <p>
             You can see my side-projects on my{" "}
             <Link href="https://github.com/perrupa/">GitHub profile</Link>, and
-            my photographs{" "}
-            <Link href="https://instagram.com/perrupa">@perrupa</Link>.
+            my <Link href="https://instagram.com/perrupa">IG @perrupa</Link>.
           </p>
         </Section>
 

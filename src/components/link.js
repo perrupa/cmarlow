@@ -5,6 +5,7 @@ import { Palette } from "utils/theme"
 import { Link as GatsbyLink } from "gatsby"
 
 const StyledLink = styled(GatsbyLink)`
+  display: inline-block;
   color: ${Palette.neutral};
   text-decoration: none;
   position: relative;

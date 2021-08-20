@@ -1,10 +1,11 @@
 import Typography from "typography"
 
-const headerFontFamily = "Inter"
+const headerFontFamily = "Karla"
 const bodyFontFamily = "DM Mono"
 const googleFonts = [
   bodyFontFamily,
   headerFontFamily,
+  "Inter",
   "Neuton",
   "Karla",
   "DM Mono",
