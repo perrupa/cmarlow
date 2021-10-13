@@ -12,4 +12,8 @@ export const BlogContainer = styled.article`
   h6 {
     margin-top: 2em;
   }
+
+  .gatsby-resp-image-link {
+    margin: 0 -5em;
+  }
 `

@@ -16,5 +16,3 @@ description: Photos from a bike ride/walk with Lorien
 ![](./DSCF6566.jpg)
 ![](./DSCF6598-2.jpg)
 ![](./DSCF6645-2.jpg)
-
-
