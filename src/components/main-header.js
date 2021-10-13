@@ -7,4 +7,5 @@ export const MainHeader = styled.section`
   justify-content: flex-end;
   align-items: flex-end;
   background-color: ${Palette.brand};
+  margin-bottom: 1em;
 `
