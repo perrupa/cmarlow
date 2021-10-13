@@ -5,20 +5,18 @@ date: 2019-12-15
 title: Refactoring a React component using custom hooks
 ---
 
-
 I've found it extremely helpful when writing React components using hooks to create new abstractions for my multiple hooks by grouping them into a single "custom hook". Reasoning about a single hook is very simple (literally composed of a single element), but when your single component needs to keep track of multiple pieces of states, or actions that act on that state, things become tend to become more complex.
 
 At this point it's a great idea to abstract away that complexity, exposing only what is relevant in the context of the consumer.
 
-
 ```js
 /* MyApp.jsx */
 function MyApp() {
-  const [isVisible, setVisible] = useState(false);
+  const [isVisible, setVisible] = useState(false)
   const actions = {
     open: () => setVisible(true),
     close: () => setVisible(false),
-  };
+  }
 
   return (
     <main>
@@ -29,18 +27,17 @@ function MyApp() {
 
       <button onClick={actions.open}>Open dialog</button>
     </main>
-  );
+  )
 }
 ```
-
 
 ## Step one: create an empty hook
 
 ```js
 /* use-modal.jsx */
 function useModal() {
-  return;
-};
+  return
+}
 ```
 
 ...and use it in your component.
@@ -53,16 +50,16 @@ function MyApp() {
   // call it,
   const unusedValue = useModal();
 
-  // Everything else unchanged....
   const [isVisible, setVisible] = useState(false);
-  const actions = {
-    // ...
+  // Everything else unchanged....
+
+  return (/* ... */);
+}
 ```
 
-☝️  This shouldn't affect our component at all.
+☝️ This shouldn't affect our component at all.
 
 This doesn't achieve much, but it gives us a good starting point to start pulling code from our component into the cutom hook we've made.
-
 
 ## Step two: Start pulling over hooks
 
@@ -71,11 +68,11 @@ Let's make the smallest incremental changes: move over the bare minimum from our
 ```js
 export function useModal() {
   // start by moving `useState` into our hook.
-  const [isVisible, setVisible] = useState(false);
+  const [isVisible, setVisible] = useState(false)
 
   // The hook should return what the component needs.
-  return [isVisible, setVisible];
-};
+  return [isVisible, setVisible]
+}
 ```
 
 Now that that hook implements `useState`, we can start using `useModal`'s values in our component.
@@ -100,13 +97,13 @@ So far, our custom hook is acting as a simple wrapper for `useState`. Let's look
 
 ```js
 function MyApp() {
-  const [isVisible, setVisible] = useModal();
+  const [isVisible, setVisible] = useModal()
 
   // This seems to be the only place we're using `setVisible`
   const actions = {
     open: () => setVisible(true),
     close: () => setVisible(false),
-  };
+  }
   // ⬆ Let's move all this to the hook too! ⬆
 
   return (
@@ -118,10 +115,9 @@ function MyApp() {
 
       <button onClick={actions.open}>Open dialog</button>
     </main>
-  );
+  )
 }
 ```
-
 
 ## Step three: Finalize the API/complete the abstraction
 
@@ -131,18 +127,18 @@ Now let's move over the bare minimum from our component into the hook. We should
 
 ```js
 function useModal() {
-  const [isVisible, setVisible] = useState(false);
+  const [isVisible, setVisible] = useState(false)
 
   // Bring the actions into our hook.
   const actions = {
     open: () => setVisible(true),
     close: () => setVisible(false),
-  };
+  }
 
   // By providing actions to control the modal's state,
   // we no longer need to export `setVisible`.
-  return [isVisible, actions];
-};
+  return [isVisible, actions]
+}
 ```
 
 Having pulled all the state logic successfully into the custom hook, our stateless component is starting to look a whole lot more stateless again!
@@ -150,7 +146,7 @@ Having pulled all the state logic successfully into the custom hook, our statele
 ```js
 function MyApp() {
   // The modal's state is now completely isolated from our component
-  const [isVisible, {open, close}] = useModal();
+  const [isVisible, { open, close }] = useModal()
 
   return (
     <main>
@@ -161,16 +157,17 @@ function MyApp() {
 
       <button onClick={open}>Open dialog</button>
     </main>
-  );
+  )
 }
 ```
 
 It could be tempting to go further if you found yourself writing `toggle` functions quite a bit, and expose `toggle` along side `open` and `close`.
+
 ```js
-const [isVisible, {open, close}] = useModal();
-const toggle = () => isVisible ? open() : close();
+const [isVisible, { open, close }] = useModal()
+const toggle = () => (isVisible ? open() : close())
 ```
 
 You wouldn't be wrong to do that, don't forget
-> We choose the abstractions we compute by
 
+> We choose the abstractions we compute by

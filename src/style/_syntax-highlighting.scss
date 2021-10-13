@@ -58,4 +58,7 @@ pre[class*="language-"]::before {
 
 blockquote {
   font-size: 130%;
+  border-left: 1em solid $brand;
+  margin-left: 0;
+  padding-left: 1em;
 }
