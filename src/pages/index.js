@@ -28,8 +28,8 @@ export const Index = ({ data }) => {
           <p>
             Understanding how systems function as a whole is crucial to being
             most effective in those environments. The fewer concepts contained
-            in that system, the easier is to understate how they relate to each
-            other.
+            in that system, the easier it is to understate how they relate to
+            each other.
           </p>
 
           <p>
