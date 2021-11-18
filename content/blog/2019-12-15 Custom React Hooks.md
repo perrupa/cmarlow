@@ -9,23 +9,21 @@ I've found it extremely helpful when writing React components using hooks to cre
 
 At this point it's a great idea to abstract away that complexity, exposing only what is relevant in the context of the consumer.
 
-```js
+```jsx
 /* MyApp.jsx */
 function MyApp() {
   const [isVisible, setVisible] = useState(false)
-  const actions = {
-    open: () => setVisible(true),
-    close: () => setVisible(false),
-  }
+  const open = () => setVisible(true)
+  const close = () => setVisible(false)
 
   return (
     <main>
-      <Modal isVisible={isVisible} closeButton={actions.close}>
+      <Modal isVisible={isVisible} closeButton={close}>
         <h1>I'm in a dialog!</h1>
-        <button onClick={actions.close}>Close</button>
+        <button onClick={close}>Close</button>
       </Modal>
 
-      <button onClick={actions.open}>Open dialog</button>
+      <button onClick={open}>Open dialog</button>
     </main>
   )
 }
@@ -33,16 +31,16 @@ function MyApp() {
 
 ## Step one: create an empty hook
 
-```js
+```jsx
 /* use-modal.jsx */
 function useModal() {
-  return
+  return undefined
 }
 ```
 
 ...and use it in your component.
 
-```js
+```jsx
 // import the hook
 import {useModal} from './use-modal';
 
@@ -65,22 +63,22 @@ This doesn't achieve much, but it gives us a good starting point to start pullin
 
 Let's make the smallest incremental changes: move over the bare minimum from our component into the hook, testing each time we it still behaves as expected.
 
-```js
+```jsx
 export function useModal() {
   // start by moving `useState` into our hook.
   const [isVisible, setVisible] = useState(false)
 
   // The hook should return what the component needs.
-  return [isVisible, setVisible]
+  return { isVisible, setVisible }
 }
 ```
 
 Now that that hook implements `useState`, we can start using `useModal`'s values in our component.
 
-```js
+```jsx
 function MyApp() {
   // `useModal` now gives us the visibility and a setter function
-  const [isVisible, setVisible] = useModal();
+  const {isVisible, setVisible} = useModal();
 
   // We don't need useState anymore, thanks to useModal
   // const [isVisible, setVisible] = useState(false);
@@ -95,25 +93,23 @@ We should be extra careful to make sure that our tests still pass (_you are test
 
 So far, our custom hook is acting as a simple wrapper for `useState`. Let's look at where `setVisible` is being used to decide what to do next.
 
-```js
+```jsx
 function MyApp() {
-  const [isVisible, setVisible] = useModal()
+  const { isVisible, setVisible } = useModal()
 
   // This seems to be the only place we're using `setVisible`
-  const actions = {
-    open: () => setVisible(true),
-    close: () => setVisible(false),
-  }
+  const open = () => setVisible(true)
+  const close = () => setVisible(false)
   // ⬆ Let's move all this to the hook too! ⬆
 
   return (
     <main>
-      <Modal isVisible={isVisible} closeButton={actions.close}>
+      <Modal isVisible={isVisible} closeButton={close}>
         <h1>I'm in a dialog!</h1>
-        <button onClick={actions.close}>Close</button>
+        <button onClick={close}>Close</button>
       </Modal>
 
-      <button onClick={actions.open}>Open dialog</button>
+      <button onClick={open}>Open dialog</button>
     </main>
   )
 }
@@ -125,7 +121,7 @@ Now let's move over the bare minimum from our component into the hook. We should
 
 > Since the `actions` block has no external references, we know that we can move these actions into our hook.
 
-```js
+```jsx
 function useModal() {
   const [isVisible, setVisible] = useState(false)
 
@@ -137,16 +133,19 @@ function useModal() {
 
   // By providing actions to control the modal's state,
   // we no longer need to export `setVisible`.
-  return [isVisible, actions]
+  return { isVisible, actions }
 }
 ```
 
 Having pulled all the state logic successfully into the custom hook, our stateless component is starting to look a whole lot more stateless again!
 
-```js
+```jsx
 function MyApp() {
   // The modal's state is now completely isolated from our component
-  const [isVisible, { open, close }] = useModal()
+  const {
+    isVisible,
+    actions: { open, close },
+  } = useModal()
 
   return (
     <main>
@@ -163,11 +162,14 @@ function MyApp() {
 
 It could be tempting to go further if you found yourself writing `toggle` functions quite a bit, and expose `toggle` along side `open` and `close`.
 
-```js
-const [isVisible, { open, close }] = useModal()
+```jsx
+const {
+  isVisible,
+  actions: { open, close },
+} = useModal()
 const toggle = () => (isVisible ? open() : close())
 ```
 
-You wouldn't be wrong to do that, don't forget
+You wouldn't be wrong to do that, don't forget:
 
 > We choose the abstractions we compute by

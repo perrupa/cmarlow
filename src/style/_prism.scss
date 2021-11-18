@@ -155,10 +155,10 @@ $code-color-punctuation: $code-color-fade !default;
       color: $code-color-variable;
     }
 
-    &.property,
-    &.tag {
-      font-style: italic;
-    }
+    // &.property,
+    // &.tag {
+    //   font-style: italic;
+    // }
 
     &.important,
     &.statement {
