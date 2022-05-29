@@ -13,10 +13,7 @@ export const Index = ({ data }) => {
 
   return (
     <Layout isHomepage fullWidth>
-      <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      />
+      <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
 
       <MainHeader>
         <BoldTitle>C:\Marlow</BoldTitle>
