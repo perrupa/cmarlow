@@ -1,14 +1,18 @@
 import React from "react"
 import { GoogleFont } from "react-typography"
 import typography from "utils/typography"
-import { Link } from "../link"
+import { Link } from "./link"
 
 const TitleElement = ({ root, children }) =>
-  root ? <h1>{children}</h1> : <h2>{children}</h2>
+  root ? (
+    <h1 style={{ margin: 0 }}>{children}</h1>
+  ) : (
+    <h2 style={{ margin: 0 }}>{children}</h2>
+  )
 
 export const Header = ({ root = false, title }) => {
   return (
-    <header>
+    <header style={{ padding: "1em" }}>
       <GoogleFont typography={typography} />
       <TitleElement root={root}>
         <Link to={`/`}>{title}</Link>
