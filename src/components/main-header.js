@@ -3,7 +3,7 @@ import { Palette } from "utils/theme"
 
 export const MainHeader = styled.section`
   display: flex;
-  height: 40vh;
+  min-height: 40vh;
   justify-content: flex-end;
   align-items: flex-end;
   background-color: ${Palette.brand};

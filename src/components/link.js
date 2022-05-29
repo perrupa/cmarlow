@@ -38,8 +38,8 @@ const StyledLink = styled(GatsbyLink)`
     :before {
       height: 120%;
       bottom: -10%;
-      left: -2%;
-      right: -2%;
+      left: -0.5em;
+      right: -0.5em;
     }
   }
 `
