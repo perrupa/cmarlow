@@ -3,12 +3,10 @@ import { GoogleFont } from "react-typography"
 import typography from "utils/typography"
 import { Link } from "./link"
 
-const TitleElement = ({ root, children }) =>
-  root ? (
-    <h1 style={{ margin: 0 }}>{children}</h1>
-  ) : (
-    <h2 style={{ margin: 0 }}>{children}</h2>
-  )
+const TitleElement = ({ root, children }) => {
+  const props = { id: "title", style: { margin: 0 } }
+  return root ? <h1 {...props}>{children}</h1> : <h2 {...props}>{children}</h2>
+}
 
 export const Header = ({ root = false, title }) => {
   return (

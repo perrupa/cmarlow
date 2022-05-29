@@ -13,7 +13,7 @@ export const Footer = () => (
     <p>
       © {new Date().getFullYear()}, Built with
       {` `}
-      🎔 and <Link href="https://www.gatsbyjs.org">Gatsby</Link>
+      ❤️ and <Link href="https://www.gatsbyjs.org">Gatsby</Link>
     </p>
   </PageFooter>
 )

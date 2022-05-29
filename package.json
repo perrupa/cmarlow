@@ -50,13 +50,14 @@
     "javascript",
     "personal site",
     "blog",
-    "gatsby"
+    "gatsby",
+    "vim"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/perrupa/cmarlow.git"
   },
   "scripts": {
     "build": "gatsby build",
