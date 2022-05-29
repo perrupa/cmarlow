@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import "../../style/style.scss"
 
-const containerWidth = "790px"
-
 export const PageLayout = styled.section`
   max-width: 100vw;
   overflow: hidden;

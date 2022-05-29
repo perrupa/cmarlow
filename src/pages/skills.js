@@ -1,8 +1,6 @@
 import React from "react"
-import { Link } from "components/link"
 import Layout from "components/layout"
 import SEO from "components/seo"
-import { PostSummary } from "components/post-summary"
 import { BoldTitle } from "../components/bold-title"
 import { MainHeader } from "../components/main-header"
 import { Section, SectionTitle } from "../components/section"
