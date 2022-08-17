@@ -14,7 +14,7 @@ export const Skills = () => {
       />
 
       <MainHeader>
-        <BoldTitle>Skills/Learnins</BoldTitle>
+        <BoldTitle>Skills/Learnings</BoldTitle>
       </MainHeader>
 
       <Section>
