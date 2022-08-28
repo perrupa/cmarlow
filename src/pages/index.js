@@ -16,7 +16,9 @@ export const Index = ({ data }) => {
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
 
       <MainHeader>
-        <BoldTitle>C:\Marlow</BoldTitle>
+        <BoldTitle>
+          C:\Marlow<span className="blink">_</span>
+        </BoldTitle>
       </MainHeader>
 
       <SectionContainer>

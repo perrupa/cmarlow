@@ -9,4 +9,14 @@ export const BoldTitle = styled.h1`
   @media only screen and (max-width: 600px) {
     font-size: 2em;
   }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .blink {
+    animation: blink 1s step-start 0s infinite;
+  }
 `
