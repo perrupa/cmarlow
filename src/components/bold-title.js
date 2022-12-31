@@ -1,9 +1,10 @@
+import { Palette } from "utils/theme"
 import styled from "styled-components"
 
 export const BoldTitle = styled.h1`
   font-family: "DM Mono";
   font-size: 5em;
-  color: #fff;
+  color: ${props => (props.inverted ? Palette.neutral : Palette.white)};
   margin: 0.2em;
 
   @media only screen and (max-width: 600px) {

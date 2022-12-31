@@ -5,7 +5,7 @@ import { Link as GatsbyLink } from "gatsby"
 
 const StyledLink = styled(GatsbyLink)`
   display: inline-block;
-  color: ${Palette.neutral};
+  color: ${props => (props.inverted ? Palette.white : Palette.neutral)};
   text-decoration: none;
   position: relative;
   z-index: 1;
@@ -21,17 +21,18 @@ const StyledLink = styled(GatsbyLink)`
     left: 0;
     right: 0;
     transition: 0.15s;
-    background-color: ${Palette.brand};
+    background-color: ${props =>
+      props.inverted ? Palette.white : Palette.brand};
   }
 
   &:target,
   &:focus,
   &:hover {
     outline: none;
-    color: ${Palette.white};
+    color: ${props => (props.inverted ? Palette.brand : Palette.white)};
 
     * {
-      color: ${Palette.white};
+      color: ${props => (props.inverted ? Palette.brand : Palette.white)};
     }
 
     :before {

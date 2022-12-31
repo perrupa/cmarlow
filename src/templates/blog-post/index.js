@@ -1,17 +1,27 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
+import { Palette } from "utils/theme"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import { BoldTitle } from "components/bold-title"
-import { MainHeader } from "components/main-header"
 import { BlogContainer } from "components/BlogContainer"
 import { Links } from "./links"
 
+const BlogTitleWrapper = styled.section`
+  padding: 2em;
+  minheight: 40vh;
+  display: flex;
+  flex-flow: column-reverse;
+`
+
 const Post = ({ post }) => (
   <>
-    <MainHeader>
-      <BoldTitle>{post.frontmatter.title}</BoldTitle>
-    </MainHeader>
+    <BlogTitleWrapper>
+      <BoldTitle style={{ color: Palette.neutral }}>
+        {post.frontmatter.title}
+      </BoldTitle>
+    </BlogTitleWrapper>
 
     <BlogContainer>
       <p>{post.frontmatter.date}</p>
