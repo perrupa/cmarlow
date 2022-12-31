@@ -18,8 +18,8 @@ const StyledLink = styled(GatsbyLink)`
     position: absolute;
     height: 4px;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: -0.1em;
+    right: -0.1em;
     transition: 0.15s;
     background-color: ${props =>
       props.inverted ? Palette.white : Palette.brand};
@@ -37,9 +37,6 @@ const StyledLink = styled(GatsbyLink)`
 
     :before {
       height: 120%;
-      bottom: -10%;
-      left: -0.5em;
-      right: -0.5em;
     }
   }
 `

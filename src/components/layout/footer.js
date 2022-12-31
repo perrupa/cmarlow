@@ -9,11 +9,6 @@ const PageFooter = styled.footer`
   text-align: center;
   color: ${Palette.white};
   background-color: ${Palette.brand};
-
-  // a {
-  //   color: ${Palette.white};
-  //   text-decoration: underline;
-  // }
 `
 
 export const Footer = () => (
