@@ -9,10 +9,10 @@ const StyledLink = styled(GatsbyLink)`
   text-decoration: none;
   position: relative;
   z-index: 1;
-  transition: 0.15s;
+  transition: 0.15s cubic-bezier(0, 0, 0, 1.48);
 
   // pseudo-underline
-  :before {
+  & ::before {
     z-index: -1;
     content: "";
     position: absolute;
@@ -20,7 +20,7 @@ const StyledLink = styled(GatsbyLink)`
     bottom: 0;
     left: -0.1em;
     right: -0.1em;
-    transition: 0.15s;
+    transition: 0.2s cubic-bezier(0, 0, 0, 1.48);
     background-color: ${props =>
       props.inverted ? Palette.white : Palette.brand};
   }
@@ -35,10 +35,12 @@ const StyledLink = styled(GatsbyLink)`
       color: ${props => (props.inverted ? Palette.brand : Palette.white)};
     }
 
-    :before {
-      height: 120%;
-      left: -.4em;
-      right: -.4em;
+    & ::before {
+      line-height: 1.3;
+      height: 150%;
+      bottom: -25%;
+      left: -0.4em;
+      right: -0.4em;
     }
   }
 `
