@@ -13,6 +13,7 @@ const StyledLink = styled(GatsbyLink)`
 
   // pseudo-underline
   & ::before {
+    background-color: ${props => props.inverted ? Palette.white : Palette.brand};
     z-index: -1;
     content: "";
     position: absolute;
@@ -20,9 +21,8 @@ const StyledLink = styled(GatsbyLink)`
     bottom: 0;
     left: -0.1em;
     right: -0.1em;
-    transition: 0.2s cubic-bezier(0, 0, 0, 1.48);
-    background-color: ${props =>
-      props.inverted ? Palette.white : Palette.brand};
+    // hover-IN
+    transition: 0.1s ease-out;
   }
 
   &:target,
@@ -36,6 +36,8 @@ const StyledLink = styled(GatsbyLink)`
     }
 
     & ::before {
+      // hover-IN
+      transition: 0.2s cubic-bezier(0, 0, 0, 1.48);
       line-height: 1.3;
       height: 150%;
       bottom: -25%;
