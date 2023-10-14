@@ -12,11 +12,14 @@ description: Photos from a work trip to NYC
 
 ![](./nyc-burst-11.jpg)
 
-![](./nyc-burst-12.jpg)
-
 ![](./nyc-burst-13.jpg)
+> Side-saddle texting 🤯
+
+![](./nyc-burst-25.jpg)
 
 ![](./nyc-burst-14.jpg)
+
+![](./nyc-burst-12.jpg)
 
 ![](./nyc-burst-15.jpg)
 
@@ -28,7 +31,7 @@ description: Photos from a work trip to NYC
 
 ![](./nyc-burst-19.jpg)
 
-![](./nyc-burst-2.jpg)
+<!-- ![](./nyc-burst-2.jpg) -->
 
 ![](./nyc-burst-20.jpg)
 
@@ -36,13 +39,12 @@ description: Photos from a work trip to NYC
 
 ![](./nyc-burst-22.jpg)
 
-![](./nyc-burst-23.jpg)
+<!-- ![](./nyc-burst-23.jpg) -->
 
 ![](./nyc-burst-24.jpg)
 
-![](./nyc-burst-25.jpg)
 
-![](./nyc-burst-26.jpg)
+<!-- ![](./nyc-burst-26.jpg) -->
 
 ![](./nyc-burst-27.jpg)
 
