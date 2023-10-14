@@ -96,7 +96,7 @@ module.exports = {
       },
     },
     {
-      resolve :`gatsby-plugin-feed`,
+      resolve: `gatsby-plugin-feed`,
       options: {
         feeds: [
           {
@@ -130,13 +130,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: "Chris Marlow",
+        short_name: 'C:\\Marlow\\',
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/favico.png`,
       },
     },
     `gatsby-plugin-offline`,
