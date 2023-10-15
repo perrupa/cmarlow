@@ -5,6 +5,22 @@
  * @author @MoOx
  */
 
+// Overrides
+#gatsby-focus-wrapper {
+  pre {
+    padding: .5em 0;
+    margin: 0;
+  }
+
+  code {
+    text-wrap: nowrap;
+  }
+}
+
+.gatsby-highlight {
+  margin: 2em 0;
+}
+
 // prism selector
 $code-selector: "pre code";
 $code-selector-block: 'pre[class*="language-"]';

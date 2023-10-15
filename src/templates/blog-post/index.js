@@ -9,7 +9,7 @@ import { BlogContainer } from "components/BlogContainer"
 import { Links } from "./links"
 
 const BlogTitleWrapper = styled.section`
-  padding: 2em;
+  padding: 2em 0;
   minheight: 40vh;
   display: flex;
   flex-flow: column-reverse;
