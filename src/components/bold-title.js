@@ -8,7 +8,7 @@ export const BoldTitle = styled.h1`
   margin: 0.2em;
 
   @media only screen and (max-width: 600px) {
-    font-size: 2em;
+    font-size: 3em;
   }
 
   @keyframes blink {

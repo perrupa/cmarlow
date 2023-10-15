@@ -13,14 +13,6 @@ export const Content = styled.section`
     border-radius: 0;
     border: 0;
   }
-
-  .gatsby-resp-image-link {
-    @media only screen and (min-width: 600px) {
-      // margin: 1em inherit 1em;
-    }
-
-    padding: 1em 0;
-  }
 `
 
 export const Container = ({ children, fullWidth = false }) => (
