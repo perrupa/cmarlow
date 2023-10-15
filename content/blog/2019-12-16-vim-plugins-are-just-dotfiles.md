@@ -45,7 +45,7 @@ nnoremap <Down> /^#\+<cr>
 
 If all went well, we should be able to jump between markdown headings with the arrow keys now! Now let's create a new repo so we've got a _real_ real plugin, just like [tpope](https://github.com/tpope) or [junegunn](https://github.com/junegunn)!
 
-```sh
+```shell
 cd /path/to/your/projects
 mkdir markdown-navigator/
 cd markdown-navigator/

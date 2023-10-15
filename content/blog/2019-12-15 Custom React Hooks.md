@@ -83,10 +83,8 @@ function MyApp() {
   // We don't need useState anymore, thanks to useModal
   // const [isVisible, setVisible] = useState(false);
 
-  const actions = {
-    open: () => setVisible(true),
-    close: () => setVisible(false),
-  };
+  const open = () => setVisible(true)
+  const close = () => setVisible(false)
 ```
 
 We should be extra careful to make sure that our tests still pass (_you are testing your components, right?_) and ensure that our component still works as it did before.

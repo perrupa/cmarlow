@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const BlogContainer = styled.article`
   max-width: 60rem;
-  margin: 5em auto;
+  margin: 0 auto;
   padding: 0 1em;
 
   h1,
