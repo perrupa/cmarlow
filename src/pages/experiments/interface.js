@@ -1,10 +1,9 @@
 import React from "react"
 import "../../style/style.scss"
 
-export const Interface = ({ data }) => {
+export const Interface = () => {
 
   return (
-
     <div>
       <nav>
         <h2>CMarlow</h2>
