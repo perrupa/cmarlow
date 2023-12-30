@@ -13,11 +13,11 @@ export const Index = ({ data }) => {
 
   return (
     <Layout isHomepage fullWidth>
-      <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO title="Home" keywords={["blog", "gatsby", "javascript", "react"]} />
 
       <MainHeader>
         <BoldTitle>
-          C:\Marlow<span className="blink">_</span>
+          <span style={{position: "relative", right: "-0.2em"}}>C:</span>\Marlow<span className="blink">_</span>
         </BoldTitle>
       </MainHeader>
 
