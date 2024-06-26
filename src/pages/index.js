@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
+
 import { Link } from "components/link"
 import Layout from "components/layout"
 import SEO from "components/seo"
@@ -39,10 +41,12 @@ export const Index = ({ data }) => {
         </Section>
 
         <Section>
-          <SectionTitle>Articles and Posts</SectionTitle>
-          {posts.map(({ node }) => (
-            <PostSummary key={node.fields.slug} node={node} />
-          ))}
+          <ResponsiveGrid>
+            <SectionTitle>Articles and Posts</SectionTitle>
+            {posts.map(({ node }) => (
+              <PostSummary key={node.fields.slug} node={node} />
+            ))}
+          </ResponsiveGrid>
         </Section>
       </SectionContainer>
     </Layout>
@@ -73,5 +77,17 @@ export const pageQuery = graphql`
         }
       }
     }
+  }
+`
+
+
+export const ResponsiveGrid = styled.section`
+  display: grid;
+
+  // color: ${props => (props.inverted ? 'red' : 'blue')};
+
+  @media (min-width: 150em) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em 3em;
   }
 `
