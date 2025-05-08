@@ -19,7 +19,9 @@ export const Index = ({ data }) => {
 
       <MainHeader>
         <BoldTitle>
-          <span style={{position: "relative", right: "-0.2em"}}>C:</span>\Marlow<span className="blink">_</span>
+          <span style={{ position: "relative", right: "-0.2em" }}>C:</span>
+          \Marlow
+          <span className="blink">_</span>
         </BoldTitle>
       </MainHeader>
 
@@ -80,11 +82,10 @@ export const pageQuery = graphql`
   }
 `
 
-
 export const ResponsiveGrid = styled.section`
   display: grid;
 
-  // color: ${props => (props.inverted ? 'red' : 'blue')};
+  // color: ${props => (props.inverted ? "red" : "blue")};
 
   @media (min-width: 150em) {
     grid-template-columns: 1fr 1fr;
