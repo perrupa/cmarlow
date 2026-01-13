@@ -12,11 +12,9 @@ Most fonts do not come with icon glyphs by default, but there is an incredible p
 First off we need to get a NerdFont, which is super easy on a Mac using [homebrew](https://brew.sh/), but there are several ways to [grab the files from the NerdFont repository](https://github.com/ryanoasis/nerd-fonts#font-installation).
 
 ```sh
-brew tap homebrew/cask-fonts
-
 # Install some fonts!
-brew install --cask font-hack-nerd-font
-brew install --cask font-meslo-lg-nerd-font
+brew install font-hack-nerd-font
+brew install font-meslo-lg-nerd-font
 ```
 
 Now try updating your terminal to use that font, this is what that setting looks like in iTerm (under `Profiles > your profile > Text`) and make sure you have `ligatures` enabled so your terminal can detect the icon codes to render the glyphs.
